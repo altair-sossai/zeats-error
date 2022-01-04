@@ -1,9 +1,8 @@
-﻿namespace Zeats.Error
+﻿namespace Zeats.Error;
+
+public enum Severity
 {
-    public enum Severity
-    {
-        Error,
-        Warning,
-        Info
-    }
+    Error,
+    Warning,
+    Info
 }

@@ -1,18 +1,17 @@
 ﻿using System;
 
-namespace Zeats.Error.Extensions
+namespace Zeats.Error.Extensions;
+
+public static class ExceptionExtensions
 {
-    public static class ExceptionExtensions
+    public static ErrorInfo ToErrorInfo(this Exception exception)
     {
-        public static ErrorInfo ToErrorInfo(this Exception exception)
+        return new ErrorInfo
         {
-            return new ErrorInfo
-            {
-                Severity = Severity.Error,
-                Type = "Generic",
-                Message = exception.Message,
-                Details = exception.ToString()
-            };
-        }
+            Severity = Severity.Error,
+            Type = "Generic",
+            Message = exception.Message,
+            Details = exception.ToString()
+        };
     }
 }
