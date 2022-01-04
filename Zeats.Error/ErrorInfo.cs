@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace Zeats.Error;
-
-public class ErrorInfo : ErrorItem
+namespace Zeats.Error
 {
-    public List<ErrorItem> Errors { get; set; }
+    public class ErrorInfo : ErrorItem
+    {
+        public List<ErrorItem> Errors { get; set; }
+    }
 }

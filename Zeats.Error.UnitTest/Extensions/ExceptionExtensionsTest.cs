@@ -2,18 +2,19 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Zeats.Error.Extensions;
 
-namespace Zeats.Error.UnitTest.Extensions;
-
-[TestClass]
-public class ExceptionExtensionsTest
+namespace Zeats.Error.UnitTest.Extensions
 {
-    [TestMethod]
-    public void ToErrorInfo()
+    [TestClass]
+    public class ExceptionExtensionsTest
     {
-        var exception = new Exception("Lorem Ipsum");
-        var errorInfo = exception.ToErrorInfo();
+        [TestMethod]
+        public void ToErrorInfo()
+        {
+            var exception = new Exception("Lorem Ipsum");
+            var errorInfo = exception.ToErrorInfo();
 
-        Assert.IsNotNull(errorInfo);
-        Assert.AreEqual("Lorem Ipsum", errorInfo.Message);
+            Assert.IsNotNull(errorInfo);
+            Assert.AreEqual("Lorem Ipsum", errorInfo.Message);
+        }
     }
 }
